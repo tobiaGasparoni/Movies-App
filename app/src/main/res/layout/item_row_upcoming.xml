@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_span="3"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_7pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginBottom="@dimen/_7pxh"
+                android:layout_marginEnd="@dimen/_7pxh"
+                android:weightSum="1"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/upcoming_movie_image"
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/movie1"
+                        app:shapeAppearanceOverlay="@style/roundimageview2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/upcoming_title_movie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20pxh"
+                        android:text="The Marksman"
+                        android:textColor="#2F2B2B"
+                        style="@style/txtUbuntulight20"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20pxh"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_10pxh"
+                            android:layout_height="wrap_content"
+                            android:text="Release Date "
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/upcoming_releaseDate"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_10pxh"
+                            android:layout_height="wrap_content"
+                            android:text="10/11/2022"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

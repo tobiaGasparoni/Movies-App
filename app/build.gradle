@@ -1,0 +1,171 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.firebase-perf'
+
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.mr_kotlin"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation platform('com.google.firebase:firebase-bom:29.0.1')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-functions-ktx'
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+
+    //noinspection GradleDynamicVersion
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //noinspection GradleDynamicVersion
+    implementation "androidx.core:core-ktx:+"
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation "io.grpc:grpc-okhttp:1.32.2"
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // Room components
+    //noinspection GradleDependency
+    implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
+    //noinspection GradleDependency
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+    kapt "androidx.room:room-compiler:2.3.0"
+
+    implementation "androidx.room:room-runtime:2.4.0-alpha03"
+    annotationProcessor "androidx.room:room-compiler:2.4.0-alpha03"
+    kapt 'androidx.room:room-compiler:2.4.0-alpha03'
+
+
+    // Lifecycle components
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.lifecycleVersion"
+
+    // Kotlin components
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutines"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutines"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+
+    // UI
+    //implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    // Testing
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    //androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+    androidTestImplementation ("androidx.test.espresso:espresso-core:$rootProject.espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'})
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+
+
+    //recycler view
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:25.0.0'
+
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    // For control over item selection of both touch and mouse driven selection
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
+
+    //picaso library
+    implementation 'com.squareup.picasso:picasso:2.5.1'
+
+
+    // Coroutines to make the HTTP requests asynchronous(In the background thread)
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Okhttp3 for the POST requests
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    // Gson (To convert raw JSON to pretty JSON)
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+
+
+    // Declare the dependency for the Performance Monitoring library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-perf-ktx'
+
+
+
+
+
+
+
+}
+repositories {
+    mavenCentral()
+}

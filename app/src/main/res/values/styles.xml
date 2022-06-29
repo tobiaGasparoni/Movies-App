@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="groupStylered_900">
+        <item name="android:background">@drawable/rectangle_bg_red_900</item>
+    </style>
+
+    <style name="txtUbuntubold26" parent="txtUbuntubold24">
+        <item name="android:textSize">@dimen/_26pxh</item>
+        <item name="android:textColor">@color/gray_100</item>
+    </style>
+
+
+
+    <style name="txtUbuntubold24" parent="txtUbuntubold18_1">
+    <item name="android:textSize">@dimen/_24pxh</item>
+    </style>
+
+    <style name="txtUbuntubold18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/teal_900</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txtUbunturegular19" parent="txtUbunturegular15">
+        <item name="android:textSize">@dimen/_19pxh</item>
+    </style>
+
+    <style name="txtUbunturegular15" parent="txtUbuntubold25">
+        <item name="android:textSize">@dimen/_15pxh</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="txtUbuntubold25" parent="txtUbuntuMonobold25_2">
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txtUbuntuMonobold25_2" parent="txtUbuntuMonobold36">
+        <item name="android:textSize">@dimen/_25pxh</item>
+        <item name="android:textColor">@color/orange_50</item>
+    </style>
+
+    <style name="txtUbuntuMonobold36" parent="txtUbuntuMonobold25">
+        <item name="android:textSize">@dimen/_36pxh</item>
+        <item name="android:textColor">@color/teal_900</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txtUbuntuMonobold25" parent="txtUbuntubold24">
+        <item name="android:textSize">@dimen/_25pxh</item>
+        <item name="android:fontFamily">@font/ubuntu_mono</item>
+    </style>
+
+    <style name="txtUbuntulight20" parent="txtUbuntulight18">
+        <item name="android:textSize">@dimen/_20pxh</item>
+    </style>
+
+    <style name="txtUbuntulight18" parent="txtUbuntubold24">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/teal_900</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:textFontWeight" tools:targetApi="p">300</item>
+    </style>
+
+    <style name="txtSolidRoundedOutline_2" parent="txtUbuntubold24">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:background">@drawable/rectangle_bg_white_a700_border_red_900_radius_4</item>
+    </style>
+
+    <style name="btnSolidRoundedOutline">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+        <item name="android:background">@drawable/rectangle_bg_red_900_border_red_900_radius_4</item>
+    </style>
+
+
+
+</resources>

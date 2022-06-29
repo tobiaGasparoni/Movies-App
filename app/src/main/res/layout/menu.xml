@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.menu.MenuActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="#C1121F"
+        app:itemIconTint="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="101dp"
+        android:layout_height="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_ellipse_1" />
+    </FrameLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="128dp">
+
+            <ImageButton
+                android:id="@+id/Stuff_Back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:scaleType="fitCenter"
+                android:text="Stuff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/stuff_usageStats"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="#C1121F"
+                android:scaleType="fitCenter"
+                android:text="usage Stats"
+                app:backgroundTint="@null" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:text="        " />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:text="        " />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_group_2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:autoSizeTextType="uniform"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Group"
+                android:textColor="#000000" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/Stuff_List_imageButton6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bookmark_black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:autoSizeTextType="uniform"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Liked List"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_settings" />
+
+            <TextView
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:autoSizeTextType="uniform"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Settings"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_radio_button_checked_24px"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:autoSizeTextType="uniform"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Theme"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_span="2"
+                android:autoSizeTextType="uniform"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Logout"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/delete_account_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_span="2"
+                android:autoSizeTextType="uniform"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Delete account"
+                android:textColor="#FF0000" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

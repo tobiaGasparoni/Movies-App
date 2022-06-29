@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/login_layout"
+    tools:context=".ui.login.LoginActivity">
+
+    <TextView android:gravity="center" android:id="@+id/txtLOGIN"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_136pxh"
+        android:layout_marginStart="@dimen/_136pxh"
+        android:layout_marginTop="@dimen/_76pxv"
+        android:layout_width="0dp"
+        android:text="LOGIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/txtUbuntuMonobold36"/>
+
+    <TextView android:gravity="center"
+        android:id="@+id/txtSignintocont"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_100pxh"
+        android:layout_marginStart="@dimen/_101pxh"
+        android:layout_marginTop="@dimen/_17pxv"
+        android:layout_width="0dp"
+        android:text="Sign in to continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLOGIN"
+        style="@style/txtUbuntulight20"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/_20pxh"
+        android:layout_marginEnd="@dimen/_20pxh"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtSignintocont"
+        tools:layout_editor_absoluteX="0dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputEmail_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPasswordLogin_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_91pxh"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/_99pxh"
+        android:paddingStart="@dimen/_30pxh"
+        android:paddingTop="@dimen/_12pxv"
+        android:paddingEnd="@dimen/_30pxh"
+        android:paddingBottom="@dimen/_5pxv"
+        android:text="LOGIN"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        style="@style/txtSolidRoundedOutline_2" />
+
+
+    <Button
+        android:id="@+id/buttonMoveToSignup"
+        style="@style/btnSolidRoundedOutline"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_41pxv"
+        android:layout_marginStart="@dimen/_91pxh"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/_99pxh"
+        android:text="SIGNUP"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

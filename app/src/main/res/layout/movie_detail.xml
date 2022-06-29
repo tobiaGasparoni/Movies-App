@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.movie_detail.MovieDetailActivity"
+    style="@style/groupStylered_900">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/detail_movie_img"
+                android:layout_width="match_parent"
+                android:layout_height="440dp"
+                android:layout_weight="3"
+                android:layout_span="3"
+                android:adjustViewBounds="true"
+                android:background="#000000"
+                android:gravity="center"
+                android:src="@drawable/movie1" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/detail_movie_ButtonLike"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                app:srcCompat="@drawable/ic_favorite" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                app:srcCompat="@drawable/ic_bookmark_white" />
+
+            <ImageButton
+                android:id="@+id/detail_movie_ButtonDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                app:srcCompat="@drawable/dislikemovie" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="3"
+                android:layout_weight="3"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/hbo" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/netflix"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/prime"/>
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/movie_detail_textOverview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_weight="3"
+                android:layout_span="3"
+                android:background="#C1121F"
+                android:autoSizeTextType="uniform"
+                android:text="A rancher on the Arizona border becomes the unlikely defender of a young Mexican boy desperately fleeing the cartel assassins who've pursued him into the U.S." />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_1pxh">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoSizeTextType="uniform"
+                android:text="Rating Score: "
+                android:background="#C1121F"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Movie_detail_ratingScore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:text="6.4"
+                android:background="#C1121F"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="txtUbuntubold18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/teal_900</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+</resources>

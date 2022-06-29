@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_first"
+    tools:context=".ui.home.HomeActivity">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#C1121F"
+        app:itemIconTint="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="101dp"
+        android:layout_height="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_ellipse_1" />
+    </FrameLayout>
+
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/home_burger_buttom"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:adjustViewBounds="false"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/mt_menu_"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/home_name"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:text="    "
+                android:textColor="#000000" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/home_profilePic"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:src="@drawable/profile_image"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="69dp"
+                android:layout_height="30dp"
+                android:autoSizeTextType="uniform"
+                android:text="Trends"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_trend"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/table"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/item_row_trend" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

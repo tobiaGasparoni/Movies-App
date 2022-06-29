@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mr_kotlin">
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".utils.UserApplication"
+        android:theme="@style/Theme.Mr_kotlin">
+        <activity
+            android:name=".ui.edit_profile.EditProfileActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple_700" />
+
+        <activity
+            android:name=".ui.upcoming_movie_detail.upcoming_movie_detailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.upcoming_movies.UpcomingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.liked_list.LikedListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.trend_movie_detail.Movie_Detail_Trend_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.usageStats.UsageStatsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.menu.MenuActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.signup.SignupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.movie_detail.MovieDetailActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

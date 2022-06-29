@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "108404553184",
+    "project_id": "movieroolette",
+    "storage_bucket": "movieroolette.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108404553184:android:e4cbab1ce085cb247c2785",
+        "android_client_info": {
+          "package_name": "com.example.mr_kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108404553184-jr6msgj1pajcln6iv3h2gbpdq4d20h99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqKEULAjYzrhtqO-iSCW5VClVDHFEz--U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108404553184-jr6msgj1pajcln6iv3h2gbpdq4d20h99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

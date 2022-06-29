@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mt_home"
+        android:icon="@drawable/mt_home"
+        android:title=""/>
+
+
+    <item
+        android:id="@+id/mt_autoRenew"
+        android:icon="@drawable/mt_autorenew"
+        android:title=""/>
+
+    <item
+        android:id="@+id/mt_Upcoming"
+        android:icon="@drawable/upcoming_movies"
+        android:title=""/>
+
+
+</menu>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="roundimageview2" parent="">
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize"> 35dp</item>
+        <item name="color">#FFECECEC</item>
+    </style>
+
+</resources>
+

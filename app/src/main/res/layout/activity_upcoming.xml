@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/upcoming_layout"
+tools:context=".ui.upcoming_movies.UpcomingActivity">
+
+<LinearLayout
+    android:id="@+id/top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:layout_editor_absoluteX="10dp">
+
+    <ImageButton
+        android:id="@+id/upcoming_burger_buttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:tint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mt_menu_" />
+
+    <TextView
+        style="@style/txtUbuntuMonobold36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10pxh"
+        android:gravity="center"
+        android:text="UPCOMING MOVIES" />
+</LinearLayout>
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="#C1121F"
+    app:itemIconTint="#ffff"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:menu="@menu/menu" >
+
+</com.google.android.material.bottomnavigation.BottomNavigationView>
+
+<FrameLayout
+    android:id="@+id/frameLayout3"
+    android:layout_width="101dp"
+    android:layout_height="93dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_ellipse_1" />
+</FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_upcoming"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10pxh"
+        android:layout_marginBottom="@dimen/_10pxh"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/item_row_upcoming" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
